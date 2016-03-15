@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/simple_play_layout"
+    android:layout_width="match_parent"
+    android:layout_height="84dp" >
+
+    <ImageView 
+        android:id="@+id/simple_album_image"
+        android:layout_alignParentLeft="true"
+        android:layout_height="84dp"
+        android:layout_width="84dp"
+        android:src="@drawable/ic_launcher"
+        android:scaleType="centerCrop" />"
+    
+    <RelativeLayout
+        android:id="@+id/simple_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/simple_album_image"
+        android:paddingLeft="16dp" >
+        
+        <ImageButton 
+        	android:id="@+id/simple_button_play"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+	        android:background="@drawable/control_play_circle"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true" />
+        
+
+        <com.example.lyrics.MarqueeTextView
+            android:id="@+id/simple_song_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:layout_alignParentTop="true"
+        	android:layout_toLeftOf="@id/simple_button_play"
+			android:focusable="true"
+			android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="点击播放全部歌曲"
+            android:textSize="26sp" >
+        </com.example.lyrics.MarqueeTextView>
+
+        <TextView
+            android:id="@+id/simple_song_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/simple_song_title"
+        	android:layout_toLeftOf="@id/simple_button_play"
+            android:singleLine="true"
+			android:ellipsize="marquee"
+            android:textSize="18sp"
+            android:text="" />
+
+        <ProgressBar
+            android:id="@+id/simple_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/simple_song_artist"
+            android:layout_marginTop="6dp"
+            style="?android:attr/progressBarStyleHorizontal" />
+        
+    </RelativeLayout>
+      
+</RelativeLayout>

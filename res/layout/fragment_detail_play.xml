@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="84dp" >
+
+    <ImageView 
+        android:id="@+id/detail_album_image"
+        android:layout_alignParentLeft="true"
+        android:layout_height="84dp"
+        android:layout_width="84dp"
+        android:src="@drawable/ic_launcher" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/detail_album_image"
+        android:paddingLeft="16dp" >
+        
+
+      
+        <com.example.lyrics.MarqueeTextView
+            android:id="@+id/detail_song_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:layout_alignParentTop="true"
+			android:focusable="true"
+			android:ellipsize="marquee"
+			android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="点击播放全部歌曲"
+            android:textSize="26sp" >
+        </com.example.lyrics.MarqueeTextView>
+
+        <TextView
+            android:id="@+id/detail_song_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_song_title"
+            android:singleLine="true"
+			android:focusable="true"
+			android:ellipsize="marquee"
+			android:marqueeRepeatLimit="marquee_forever"
+			android:focusableInTouchMode="true"
+            android:textSize="18sp" />
+        
+        <TextView
+            android:id="@+id/detail_song_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_song_artist"
+            android:singleLine="true"
+			android:focusable="true"
+			android:ellipsize="marquee"
+			android:focusableInTouchMode="true"
+            android:textSize="18sp" />
+        
+    </RelativeLayout>
+      
+</RelativeLayout>

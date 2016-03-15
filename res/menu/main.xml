@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/action_overflow"
+          android:orderInCategory="100"
+          android:showAsAction="ifRoom"
+          android:title="@string/action_settings"
+          android:icon="@drawable/ic_action_overflow">
+        
+        <menu >
+            <item android:id="@+id/action_refresh"
+                  android:icon="@drawable/ic_action_refresh"
+                  android:title="刷新播放列表" />
+            <item android:id="@+id/action_settings"
+                  android:icon="@drawable/ic_action_settings"
+                  android:title="设置" />
+        </menu>
+    </item>
+
+</menu>
